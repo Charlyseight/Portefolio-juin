@@ -1,0 +1,9 @@
+@mixin button{
+  text-decoration: none;
+  padding: 0.8em 3%;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: "Open Sans Light";
+  font-size: 1.6em;
+}

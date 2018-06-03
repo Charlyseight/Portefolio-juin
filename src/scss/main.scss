@@ -1,0 +1,646 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("../fonts/opensansregular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Open Sans EBold';
+    src: url("../fonts/opensansextrabold.woff") format("woff") ;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Open Sans SBold';
+    src: url("../fonts/opensanssemibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'italianno';
+    src: url("../fonts/italianno.woff") format("woff");
+}
+
+body{
+    font-family: $font;
+    font-weight: 400;
+    font-size: 65.2%;
+    max-width: 100%;
+}
+.hidden{
+    position: absolute;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.meta{
+    display: none;
+}
+///////////////////////////////////////////////////////////ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+.header{
+    background: url("../images/portefolio__banner.jpg") 70% 25% no-repeat;
+    background-size: cover;
+    padding-bottom: 60em;
+    width: 100%;
+    position: relative;
+}
+
+.flex__logo__link{
+    display: block;
+    width: 70px;
+    height: 70px;
+    //margin: 3em 0 0 3em;
+    padding: 3em 0 0 3em;
+}
+
+.link__logo{
+    width: 100%;
+    height: auto;
+}
+
+.header__title{
+    width: 50%;
+}
+
+.blocheader__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blocheader__menu__list{
+    display: flex;
+    margin-right: 3em;
+}
+
+.menu__items__link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    margin: 0 1em;
+    padding: 1.5em;
+}
+
+.header__name{
+    display: block;
+    font-size: 4em;
+    color:white;
+    font-family: $fontlight;
+    text-transform: uppercase;
+    position:absolute;
+    bottom: 350px;
+    left: 10%;
+
+}
+.header__job{
+    font-size: 3em;
+    color:white;
+    letter-spacing: 2px;
+    font-family: $fontbold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 420px;
+    left: 18%;
+}
+.menu__items .active{
+    border-bottom: 2px solid white;
+    padding-bottom: 1em;
+}
+
+.blocheader__menu__desk{
+    background: url("../images/menu_white.svg") no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 3em 4em 0em 0em;
+    display: none;
+}
+
+///////////////////////////////////////////////////////END_ABOUT // HEADER/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////ABOUT // WHO AM I ? /////////////////////////////////////////////////////////////////
+.blocme{
+    margin : 15em 0%;
+    text-align: center;
+}
+
+.strong{
+    font-family: $fontboldsemi;
+    color: dimgrey;
+}
+.blocme__title1{
+    text-transform: uppercase;
+    font-family: $fontbold;
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+.blocme__chapo{
+    font-family: $scriptfont;
+    font-size: 3.8em;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+.blocme__text{
+    font-size: 1.8em;
+    line-height: 2;
+    color: dimgrey;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto 1.5em;
+    font-family: $fontlight ;
+}
+.blocme__button{
+    @include button;
+    background-color: dimgrey;
+    color: white;
+    display: inline-block;
+    margin: 2em 0em 0em 0em;
+}
+.blocme__button:hover{
+    background-color: black;
+}
+
+///////////////////////////////////////////////////////////END_ABOUT // WHO AM I ? ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+.blocresume{
+    margin : $margin;
+    text-align: center;
+    padding-top: 5em;
+}
+
+.blocresume__title1{
+    font-size: 3vw;
+    width: 100%;
+    font-family: $fontlight;
+    letter-spacing: 1px;
+}
+
+.blocresume__content__resume{
+    @include button;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin: 5em 0 0 0;
+}
+
+.blocresume__content__resume:hover{
+    background-color: dimgrey;
+}
+
+.blocresume__content__img{
+    width: 90%;
+    height: auto;
+}
+
+
+///////////////////////////////////////////////////////END_ABOUT // RESUME/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // HOBBIES/////////////////////////////////////////////////////////////////////
+.blochobbies{
+    background-color: $grey;
+}
+
+.blochobbies__margin{
+    margin : $margin;
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 0;
+}
+.aboutme__title1{
+    font-size: 2.5vw;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    padding-bottom: 0.5em;
+}
+.aboutme__title1--typochange{
+    font-family: $scriptfont;
+    text-transform: lowercase;
+    font-size: 2em;
+}
+.aboutme__text{
+    width: 60%;
+    line-height: $lineheigh;
+    color: dimgrey;
+    font-size: 1.5em;
+    font-family: $fontlight;
+}
+.blochobbies__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-left: 1px solid lightgray;
+    padding-left: 18%;
+    width: 926px;
+}
+.blochobbies__list__items{
+    margin: 0 0 3em 2.5em;
+}
+.item__img{
+    width: 80px;
+    height: 80px;
+}
+/////////////////////////////////////////////////////END_ABOUT // HOBBIES/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////ABOUT // SKILLS/////////////////////////////////////////////////////////////////////
+.blocskills{
+    background : linear-gradient(to right, $grey 12.8028125%, white 12.8028125%);
+}
+.blocskills__content{
+    margin: $margin;
+    padding: 15em 0 15em 3em;
+}
+
+.blocskills__content__title1{
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin-bottom: 0.8em;
+    font-weight: 800;
+}
+
+.blocskills__content__title1--typochange{
+    font-family: $scriptfont;
+    text-transform: initial;
+    font-size: 1.5em;
+}
+.blocskills__content__text{
+    color: dimgrey;
+    font-family: $fontlight ;
+    font-size: 1.8em;
+    line-height: $lineheigh;
+    margin-bottom: 2em;
+}
+
+.text__adjectif{
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 2.5em;
+}
+
+.text__adjectif:before{
+    content: "";
+    border-bottom: 1px solid lightgrey;
+    width: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+}
+
+.blocskills__icon__list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 4em;
+}
+
+.skillslist__item__img{
+    width: 50%;
+    height: auto;
+    margin: 2em 0em 2em 0;
+}
+
+.text__catch{
+    font-size: 1.8em;
+    color: dimgrey;
+    font-family: $fontlight;
+    margin-top: 2em;
+    line-height: $lineheigh;
+}
+
+.blocskills__content__button{
+    @include button;
+    background-color: dimgrey;
+    color: white;
+    display: inline-block;
+    margin-top: 4em;
+}
+
+.blocskills__content__button:hover{
+    background-color: black;
+}
+
+////////////////////////////////////////////////////END_ABOUT // SKILLS/////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////WORK // HEADER /////////////////////////////////////////////////////////////
+
+ .blocworks__menu__link, .bloccontact__menu__link{
+    color: black;
+}
+
+ .blocworks__header, .bloccontact__header{
+    background: none;
+}
+
+.list .active{
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+}
+
+.works__title, .contact__title{
+    font-size: 18vw;
+    width: 100%;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0.5em 0 .8em 0;
+}
+
+.js .blocworks__menu__desk,.js .bloccontact__menu__desk{
+    background: url("../images/menu.svg") no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 3em 4em 0em 0em;
+    display: none;
+}
+
+.burgercss{
+    display: none;
+}
+.no-js #buttonjs{
+    visibility: hidden;
+}
+#burger{
+    visibility: hidden;
+}
+
+////////////////////////////////////////////////////////////////END_WORK // HEADER /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////WORK // LIST /////////////////////////////////////////////////////////////
+.blocworks__list{
+    border-bottom: 1px solid rgba(1,1,1,0.2);
+    margin-bottom: 15em;
+}
+
+.blocworks__list .article:nth-child(odd){
+    background-color: rgba(1,1,1,0.2);
+
+}
+.blocworks__list .article:nth-child(even) .blocworks__list__cat{
+    color: dimgrey;
+}
+
+.article:nth-child(even){
+    text-align: right;
+}
+
+.blocworks__list__cat{
+    font-family: $scriptfont;
+    font-size: 2.5vw;
+    padding: 0 6%;
+    display: block;
+    margin-top: 2em;
+}
+
+
+.blocworks__list--name{
+    text-transform: uppercase;
+    font-family: $fontbold;
+    font-size: 2vw;
+    padding: 0 6%;
+    margin-top: 1em;
+}
+
+.blocworks__list--text{
+    font-size: 1.3vw;
+    line-height: $lineheigh;
+    padding: 0em 6%;
+    margin-top: 2em;
+}
+
+.article__content, .article__images{
+    flex: 1;
+}
+
+.blocworks__list--img{
+    width: 100%;
+    height: auto;
+}
+
+.article__flex{
+    display: flex;
+}
+////////////////////////////////////////////////////////////END_WORK // LIST /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////INSTA // ABOUT /////////////////////////////////////////////////////////////
+.blocinsta{
+    margin: $margin;
+}
+.blocinsta__title1{
+    font-family: $scriptfont;
+    font-size: 5vw;
+    text-align: right;
+    width: 100%;
+}
+
+.blocinsta__title1--typochange{
+    font-family: $font;
+    text-transform: uppercase;
+    font-size: 0.4em;
+    letter-spacing: 2px;
+    padding: 0 0 1em 0.3em;
+    border-bottom: 0.3px solid lightgray;
+}
+
+.blocinsta__button{
+    @include button;
+    background-color: dimgrey;
+    display: inline-block;
+    color: white;
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.blocinsta__button:hover{
+    background-color: black;
+}
+
+.blocinsta__images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 4em;
+}
+
+.blocinsta__img{
+    width: 30%;
+    height: 30%;
+}
+
+////////////////////////////////////////////////////////////END_INSTA // ABOUT /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////CONTACT /////////////////////////////////////////////////////////////
+
+.contact__div{
+    display: flex;
+    justify-content: space-between;
+    margin: 20em 13%;
+}
+
+.bloccontact__form__flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloccontact__title1{
+    font-size: 6em;
+    font-family: $scriptfont;
+    margin-bottom: 0.5em;
+}
+
+.info{
+    width: 350px;
+    font-size: 2em;
+    color: dimgrey;
+    margin-bottom: 1.5em;
+}
+
+.bloccontact__network{
+    display: flex;
+
+}
+
+.social{
+    font-size: 3em;
+    color: black;
+    margin: 1em 5%;
+}
+
+.bloccontact__form__flex .input, .bloccontact__form__flex .bloccontact__form--textarea{
+    border: 1px solid lightgrey;
+    margin-bottom: 1.5em;
+    padding-top: 0.8em;
+    padding-bottom: .8em;
+    padding-left: 2%;
+    width: 320px;
+}
+
+.bloccontact__form__flex .label{
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 0.5em;
+}
+
+.bloccontact__form--inputsubmit{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 0.5em 2em;
+    font-weight: 100;
+    font-size: 1.6em;
+    margin-top: 1em;
+}
+
+.bloccontact__form--inputsubmit:hover{
+    background-color: dimgrey;
+    color: white;
+}
+
+.border{
+    border-left: 1px solid lightgrey;
+    padding-left: 18%;
+}
+
+.bloccontact__picture__img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.no-js blockquote{
+    display: none;
+}
+
+.bloccontact__blockquote{
+    text-align: center;
+    position: relative;
+    padding-bottom: 10em;
+
+}
+
+.bloccontact__blockquote__item{
+    font-size: 5vw;
+    font-weight: 400;
+    color: dimgrey;
+    display: inline;
+}
+
+.txt-rotate{
+    color: black;
+}
+
+.bloccontact__blockquote__link{
+    @include button;
+    background-color: black;
+    color: white;
+    display: block;
+    width: 77px;
+    margin: 8em auto 0em;
+}
+
+.bloccontact__blockquote__link:hover{
+    background-color: dimgrey;
+}
+
+///////////////////////////////////////////////////////////////END_CONTACT ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////FOOTER ///////////////////////////////////////////////////////////////
+blocfooter{
+    border-top: 1px solid lightgray;
+    padding-top: 10em;
+    text-align: center;
+}
+
+.blocfooter__logo__img{
+    display: block;
+    margin: 0 auto 8em;
+    width: 70px;
+    height: 70px;
+
+}
+
+.blocfooter__info{
+    display: flex;
+    justify-content: center;
+    margin: 4em;
+
+}
+
+.blocfooter__info__content{
+    font-size: 1.5vw;
+    margin: 0 3em;
+
+}
+
+.blocfooter__network{
+    text-align: center;
+}
+
+.blocfooter__network__content{
+    color: black;
+    font-size: 3em;
+    display: inline-block;
+    margin: 1.2em;
+}
+
+small{
+    display: block;
+    margin-bottom: 6em;
+}
+
+.bloccontact__copyright{
+    text-align: center;
+}
+
+.bloccontact__info--none{
+    display: none;
+}
+///////////////////////////////////////////////////////////END_FOOTER ///////////////////////////////////////////////////////////////
+
+@import "responsive";
