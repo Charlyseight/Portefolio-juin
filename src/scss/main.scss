@@ -383,8 +383,12 @@ body{
 
 .blocworks__list .article:nth-child(odd){
     background-color: rgba(1,1,1,0.2);
-
 }
+
+.blocworks__list .article:nth-child(even){
+    background-color: white;
+}
+
 .blocworks__list .article:nth-child(even) .blocworks__list__cat{
     color: dimgrey;
 }
@@ -589,9 +593,41 @@ body{
     background-color: dimgrey;
 }
 
+.errors ul li p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: $font;
+    color: red;
+    margin-bottom: .5em;
+}
+
+.fa-exclamation{
+    color: red;
+    margin-right: .3em;
+}
+
+.return{
+    @include button;
+    background-color: black;
+    color: white;
+}
+
+.envoye__div{
+    margin: 0 $margin;
+    text-align: center;
+}
+.envoye__div p{
+    font-size: 4em;
+    color: black;
+    font-family: $scriptfont;
+    margin: 4em 0;
+}
+
+
+
 ///////////////////////////////////////////////////////////////END_CONTACT ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////FOOTER ///////////////////////////////////////////////////////////////
-blocfooter{
+.blocfooter{
     border-top: 1px solid lightgray;
     padding-top: 10em;
     text-align: center;
@@ -640,6 +676,21 @@ small{
 
 .bloccontact__info--none{
     display: none;
+}
+
+.article--link{
+    text-decoration: none;
+    color: initial;
+}
+
+.article:hover{
+    transform: scale(1.05);
+    z-index: 2;
+    transition: all 400ms ease-in;
+}
+
+.checkbox:focus ~ .burgercss>span{
+    background-color: red;
 }
 ///////////////////////////////////////////////////////////END_FOOTER ///////////////////////////////////////////////////////////////
 
